@@ -1,0 +1,10 @@
+<component name="ProjectRunConfigurationManager">
+  <configuration default="false" name="justice-web" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+    <module name="justice-web.main" />
+    <option name="SPRING_BOOT_MAIN_CLASS" value="me.pugabyte.justiceweb.JusticeWebApplication" />
+    <option name="ALTERNATIVE_JRE_PATH" />
+    <method v="2">
+      <option name="Make" enabled="true" />
+    </method>
+  </configuration>
+</component>
