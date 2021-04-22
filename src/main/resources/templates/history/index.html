@@ -6,6 +6,6 @@
 </head>
 <body>
 <p th:text="'History for ' + ${name}"></p>
-<pre th:text="${history}"></pre>
+<pre th:text="${history.toPrettyString()}"></pre>
 </body>
 </html>
