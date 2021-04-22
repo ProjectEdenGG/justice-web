@@ -1,0 +1,6 @@
+me.pugabyte:
+  justice-web:
+    env: DEV
+    database:
+      mongo:
+        password: test
