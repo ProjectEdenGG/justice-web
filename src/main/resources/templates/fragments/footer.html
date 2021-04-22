@@ -1,8 +1,9 @@
 <div xmlns:th="http://www.thymeleaf.org">
     <!-- Footer -->
-    <footer class="py-5 bg-dark">
+    <footer class="py-3 bg-dark">
         <div class="container">
-            <p class="m-0 text-center text-white" th:text="'&copy; Project Eden ' + ${#dates.year(#dates.createNow())}"></p>
+            <p class="m-0 text-center text-white"
+               th:text="'&copy; Project Eden ' + ${#dates.year(#dates.createNow())}"></p>
         </div>
         <!-- /.container -->
     </footer>

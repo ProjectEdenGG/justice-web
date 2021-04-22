@@ -7,8 +7,25 @@ header {
   padding: 156px 0 100px;
 }
 
+body {
+  background-color: #191A1A;
+  color: #cccccc;
+}
+
+.form-control {
+  background-color: #191A1A;
+  border: 1px solid #1a1d1d;
+  color: #cccccc;
+}
+
+.form-control:focus {
+  background-color: #191A1A;
+  color: #cccccc;
+}
+
 body > div.container {
   padding-top: 90px;
+  padding-bottom: 50px;
 }
 
 body > footer > div > footer {
