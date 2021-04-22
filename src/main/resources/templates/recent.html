@@ -14,19 +14,14 @@
 <div class="container">
     <div class="row">
         <div class="col-lg-12 mx-auto">
-            <h1 th:text="${ #StringUtils.camelCase(type) } + 's'"/><br/>
+            <h1 th:text="${ #StringUtils.camelCase(type) } + 's'"/>
             <div>
                 <p th:each="entry : ${ punishments }">
-                    <span><b>Player:    </b></span><span
-                        th:text="${ #Nerd.of(entry.getUuid()).getNickname()              }"/><br/>
-                    <span><b>Punisher:  </b></span><span
-                        th:text="${ #Nerd.of(entry.getPunisher()).getNickname()          }"/><br/>
-                    <span><b>Type:      </b></span><span
-                        th:text="${ #StringUtils.camelCase(entry.getType())              }"/><br/>
-                    <span><b>Timestamp: </b></span><span
-                        th:text="${ #TimeUtils.shortDateTimeFormat(entry.getTimestamp()) }"/><br/>
-                    <span><b>Reason:    </b></span><span
-                        th:text="${ entry.getReason()                                    }"/><br/>
+                    <span><b>Player:    </b></span><span th:text="${ #Nerd.of(entry.getUuid()).getNickname()              }"/><br/>
+                    <span><b>Punisher:  </b></span><span th:text="${ #Nerd.of(entry.getPunisher()).getNickname()          }"/><br/>
+                    <span><b>Type:      </b></span><span th:text="${ #StringUtils.camelCase(entry.getType())              }"/><br/>
+                    <span><b>Timestamp: </b></span><span th:text="${ #TimeUtils.shortDateTimeFormat(entry.getTimestamp()) }"/><br/>
+                    <span><b>Reason:    </b></span><span th:text="${ entry.getReason()                                    }"/><br/>
                     <br/>
                 </p>
             </div>
