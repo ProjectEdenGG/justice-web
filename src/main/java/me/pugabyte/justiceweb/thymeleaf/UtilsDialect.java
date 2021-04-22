@@ -1,6 +1,7 @@
 package me.pugabyte.justiceweb.thymeleaf;
 
 import eden.models.nerd.Nerd;
+import eden.models.punishments.PunishmentType;
 import eden.utils.StringUtils;
 import eden.utils.TimeUtils;
 import lombok.SneakyThrows;
@@ -19,7 +20,7 @@ import java.util.stream.Collectors;
 public class UtilsDialect extends AbstractDialect implements IExpressionObjectDialect {
 	final List<Class<?>> utils = Arrays.asList(
 			// Add Util classes here
-			StringUtils.class, TimeUtils.class, Nerd.class
+			StringUtils.class, TimeUtils.class, Nerd.class, PunishmentType.class
 	);
 
 	public UtilsDialect() {
