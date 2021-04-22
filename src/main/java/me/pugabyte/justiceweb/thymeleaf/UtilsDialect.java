@@ -18,8 +18,7 @@ import java.util.stream.Collectors;
 
 @Component
 public class UtilsDialect extends AbstractDialect implements IExpressionObjectDialect {
-	final List<Class<?>> utils = Arrays.asList(
-			// Add Util classes here
+	final List<Class<?>> utils = Arrays.asList( // Add Util classes here
 			StringUtils.class, TimeUtils.class, Nerd.class, PunishmentType.class
 	);
 
