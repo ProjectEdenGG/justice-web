@@ -28,7 +28,7 @@ body > div.container {
   padding-bottom: 50px;
 }
 
-body > footer > div > footer {
+body > footer {
   position: fixed;
   bottom: 0;
   width: 100%;

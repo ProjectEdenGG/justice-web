@@ -1,11 +1,11 @@
 <!DOCTYPE html>
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
 
-<head th:insert="/fragments/header.html">
+<head th:replace="/fragments/header.html :: head"/>
 
 <body>
 
-<div th:insert="/fragments/navbar.html"/>
+<nav th:replace="/fragments/navbar.html :: nav"/>
 
 <div class="container">
     <div class="row">
@@ -14,7 +14,7 @@
     </div>
 </div>
 
-<footer th:include="/fragments/footer.html"></footer>
+<footer th:replace="/fragments/footer.html :: footer"/>
 
 </body>
 
