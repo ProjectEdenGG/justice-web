@@ -1,12 +1,12 @@
 package me.pugabyte.justiceweb;
 
+import edenapi.EdenAPI;
+import edenapi.mongodb.DatabaseConfig;
+import edenapi.utils.Env;
 import lombok.Getter;
-import me.pugabyte.edenapi.mongodb.DatabaseConfig;
-import me.pugabyte.edenapi.utils.Env;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-import me.pugabyte.edenapi.EdenAPI;
 
 @SpringBootApplication
 public class Application extends EdenAPI {
@@ -32,6 +32,7 @@ public class Application extends EdenAPI {
 	public DatabaseConfig getDatabaseConfig() {
 		return DatabaseConfig.builder()
 				.password(mongoPassword)
+				.prefix(env == Env.PROD ? null : env.name().toLowerCase())
 				.build();
 	}
 
