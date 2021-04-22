@@ -1,8 +1,8 @@
 package me.pugabyte.justiceweb;
 
-import edenapi.EdenAPI;
-import edenapi.mongodb.DatabaseConfig;
-import edenapi.utils.Env;
+import eden.EdenAPI;
+import eden.mongodb.DatabaseConfig;
+import eden.utils.Env;
 import lombok.Getter;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.boot.SpringApplication;

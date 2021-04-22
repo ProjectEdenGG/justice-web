@@ -1,8 +1,8 @@
 package me.pugabyte.justiceweb.thymeleaf;
 
-import edenapi.models.nerd.Nerd;
-import edenapi.utils.StringUtils;
-import edenapi.utils.TimeUtils;
+import eden.models.nerd.Nerd;
+import eden.utils.StringUtils;
+import eden.utils.TimeUtils;
 import lombok.SneakyThrows;
 import org.springframework.stereotype.Component;
 import org.thymeleaf.context.IExpressionContext;
@@ -11,7 +11,6 @@ import org.thymeleaf.dialect.IExpressionObjectDialect;
 import org.thymeleaf.expression.IExpressionObjectFactory;
 
 import java.util.Arrays;
-import java.util.Collections;
 import java.util.List;
 import java.util.Set;
 import java.util.stream.Collectors;

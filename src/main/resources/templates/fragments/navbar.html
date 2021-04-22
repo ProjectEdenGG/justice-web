@@ -1,4 +1,7 @@
 <div xmlns:th="http://www.thymeleaf.org">
+    <!--/*@thymesVar id="#StringUtils" type="eden.utils.StringUtils"*/-->
+    <!--/*@thymesVar id="types" type="java.util.List<eden.models.punishments.PunishmentType>"*/-->
+
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top" id="mainNav">
         <div class="container">
             <a class="navbar-brand js-scroll-trigger" href="/">Justice</a>
@@ -7,11 +10,13 @@
             </button>
             <div class="collapse navbar-collapse" id="navbarResponsive">
                 <ul class="navbar-nav ml-auto">
-                    <li class="nav-item" th:each="type: ${types}" style="padding-right: 10px">
-                        <a class="nav-link" href="#" th:text="${#StringUtils.camelCase(type)} + 's'"></a>
+                    <li class="nav-item" th:each="type: ${ types }" style="padding-right: 10px">
+                        <a class="nav-link" th:href="@{'/recent/' + ${ #strings.toLowerCase(type) } + 's'}"
+                           th:text="${ #StringUtils.camelCase(type) } + 's'"></a>
                     </li>
-                    <li class="nav-item" style="padding-left: 20px">
-                        <form name="search" onsubmit="document.location.href = '/history/'+this.player.value; return false;" >
+                    <li class="nav-item">
+                        <form name="search"
+                              onsubmit="document.location.href = '/history/player/' + this.player.value; return false;">
                             <input name="player" type="text" class="form-control" placeholder="Search">
                         </form>
                     </li>
@@ -19,4 +24,5 @@
             </div>
         </div>
     </nav>
+
 </div>
