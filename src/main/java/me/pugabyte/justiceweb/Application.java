@@ -1,8 +1,7 @@
 package me.pugabyte.justiceweb;
 
 import lombok.Getter;
-import me.pugabyte.edenapi.persistence.DatabaseConfig;
-import me.pugabyte.edenapi.persistence.DatabaseType;
+import me.pugabyte.edenapi.mongodb.DatabaseConfig;
 import me.pugabyte.edenapi.utils.Env;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.boot.SpringApplication;
@@ -30,9 +29,8 @@ public class Application extends EdenAPI {
 	private String mongoPassword;
 
 	@Override
-	public DatabaseConfig getDatabaseConfig(DatabaseType type) {
+	public DatabaseConfig getDatabaseConfig() {
 		return DatabaseConfig.builder()
-				.type(type)
 				.password(mongoPassword)
 				.build();
 	}
