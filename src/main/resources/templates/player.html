@@ -5,11 +5,11 @@
 <!--/*@thymesVar id="#TimeUtils" type="eden.utils.TimeUtils"*/-->
 <!--/*@thymesVar id="#StringUtils" type="eden.utils.StringUtils"*/-->
 
-<head th:replace="/fragments/header.html :: head"/>
+<head th:replace="/fragments/header"/>
 
 <body>
 
-<nav th:replace="/fragments/navbar.html :: nav"/>
+<div th:replace="/fragments/navbar"/>
 
 <div class="container">
     <div class="row">
@@ -18,7 +18,7 @@
             <br/>
             <div>
                 <p th:each="entry : ${ history.getPunishments() }">
-                    <span><b>Punisher:  </b></span><span th:text="${ #Nerd.of(entry.getPunisher()).getName()              }"/><br/>
+                    <span><b>Punisher:  </b></span><span th:text="${ #Nerd.of(entry.getPunisher()).getNickname()          }"/><br/>
                     <span><b>Type:      </b></span><span th:text="${ #StringUtils.camelCase(entry.getType())              }"/><br/>
                     <span><b>Timestamp: </b></span><span th:text="${ #TimeUtils.shortDateTimeFormat(entry.getTimestamp()) }"/><br/>
                     <span><b>Reason:    </b></span><span th:text="${ entry.getReason()                                    }"/><br/>
@@ -29,7 +29,8 @@
     </div>
 </div>
 
-<footer th:replace="/fragments/footer.html :: footer"/>
+<div th:replace="/fragments/footer"/>
+<div th:replace="/fragments/scripts"/>
 
 </body>
 

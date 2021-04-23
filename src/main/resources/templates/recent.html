@@ -5,16 +5,17 @@
 <!--/*@thymesVar id="#TimeUtils" type="eden.utils.TimeUtils"*/-->
 <!--/*@thymesVar id="#StringUtils" type="eden.utils.StringUtils"*/-->
 
-<head th:replace="/fragments/header.html :: head"/>
+<head th:replace="/fragments/header"/>
 
 <body>
 
-<nav th:replace="/fragments/navbar.html :: nav"/>
+<div th:replace="/fragments/navbar"/>
 
 <div class="container">
     <div class="row">
         <div class="col-lg-12 mx-auto">
             <h1 th:text="${ #StringUtils.camelCase(type) } + 's'"/>
+            <br/>
             <div>
                 <p th:each="entry : ${ punishments }">
                     <span><b>Player:    </b></span><span th:text="${ #Nerd.of(entry.getUuid()).getNickname()              }"/><br/>
@@ -29,7 +30,8 @@
     </div>
 </div>
 
-<footer th:replace="/fragments/footer.html :: footer"/>
+<div th:replace="/fragments/footer"/>
+<div th:replace="/fragments/scripts"/>
 
 </body>
 
