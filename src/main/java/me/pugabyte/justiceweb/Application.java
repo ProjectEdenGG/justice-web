@@ -25,14 +25,14 @@ public class Application extends EdenAPI {
 	private Env env;
 
 	@Getter
-	@Value("${me.pugabyte.justice-web.database.mongo.password}")
-	private String mongoPassword;
+	@Value("${me.pugabyte.justice-web.databases.mongodb.password}")
+	private String mongodb_password;
 
 	@Override
 	public DatabaseConfig getDatabaseConfig() {
 		return DatabaseConfig.builder()
-				.password(mongoPassword)
-				.prefix(env == Env.PROD ? null : env.name().toLowerCase())
+				.password(mongodb_password)
+				.env(env)
 				.build();
 	}
 
