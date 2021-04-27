@@ -8,6 +8,9 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 
+import javax.servlet.RequestDispatcher;
+import javax.servlet.http.HttpServletRequest;
+
 @Controller
 public class JusticeController {
 
@@ -36,6 +39,12 @@ public class JusticeController {
 		model.addAttribute("type", punishmentType);
 		model.addAttribute("punishments", new PunishmentsService().page(punishmentType, page, 10));
 		return "recent";
+	}
+
+	@GetMapping("error")
+	public String error(HttpServletRequest request, Model model) {
+		model.addAttribute("errorMessage", request.getAttribute(RequestDispatcher.ERROR_MESSAGE));
+		return "error";
 	}
 
 }
