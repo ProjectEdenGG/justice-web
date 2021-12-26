@@ -3,4 +3,5 @@ gradle
 build
 *.iml
 .idea
+application.yml
 

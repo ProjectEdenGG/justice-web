@@ -1,9 +1,9 @@
-package me.pugabyte.justiceweb.thymeleaf;
+package gg.projecteden.justiceweb.thymeleaf;
 
-import eden.models.nerd.Nerd;
-import eden.models.punishments.PunishmentType;
-import eden.utils.StringUtils;
-import eden.utils.TimeUtils;
+import gg.projecteden.models.nerd.Nerd;
+import gg.projecteden.models.punishments.PunishmentType;
+import gg.projecteden.utils.StringUtils;
+import gg.projecteden.utils.TimeUtils;
 import lombok.SneakyThrows;
 import org.springframework.stereotype.Component;
 import org.thymeleaf.context.IExpressionContext;

@@ -1,8 +1,8 @@
-package me.pugabyte.justiceweb;
+package gg.projecteden.justiceweb;
 
-import eden.EdenAPI;
-import eden.mongodb.DatabaseConfig;
-import eden.utils.Env;
+import gg.projecteden.EdenAPI;
+import gg.projecteden.mongodb.DatabaseConfig;
+import gg.projecteden.utils.Env;
 import lombok.Getter;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.boot.SpringApplication;
@@ -21,11 +21,11 @@ public class Application extends EdenAPI {
 	}
 
 	@Getter
-	@Value("${me.pugabyte.justice-web.env}")
+	@Value("${gg.projecteden.justice-web.env}")
 	private Env env;
 
 	@Getter
-	@Value("${me.pugabyte.justice-web.databases.mongodb.password}")
+	@Value("${gg.projecteden.justice-web.databases.mongodb.password}")
 	private String mongodb_password;
 
 	@Override

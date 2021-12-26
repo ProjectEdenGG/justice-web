@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
 
-<!--/*@thymesVar id="#Nerd" type="eden.models.nerd.Nerd"*/-->
-<!--/*@thymesVar id="#TimeUtils" type="eden.utils.TimeUtils"*/-->
-<!--/*@thymesVar id="#StringUtils" type="eden.utils.StringUtils"*/-->
+<!--/*@thymesVar id="#Nerd" type="gg.projecteden.models.nerd.Nerd"*/-->
+<!--/*@thymesVar id="#TimeUtils" type="gg.projecteden.utils.TimeUtils"*/-->
+<!--/*@thymesVar id="#StringUtils" type="gg.projecteden.utils.StringUtils"*/-->
 
 <head th:replace="fragments/header"/>
 
@@ -22,6 +22,7 @@
                     <span><b>Type:      </b></span><span th:text="${ #StringUtils.camelCase(entry.getType())              }"/><br/>
                     <span><b>Timestamp: </b></span><span th:text="${ #TimeUtils.shortDateTimeFormat(entry.getTimestamp()) }"/><br/>
                     <span><b>Reason:    </b></span><span th:text="${ entry.getReason()                                    }"/><br/>
+                    <span><b>Time:      </b></span><span th:text="${ entry.getTimeLeft()                                  }"/><br/>
                     <br/>
                 </p>
             </div>

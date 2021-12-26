@@ -1,8 +1,8 @@
-package me.pugabyte.justiceweb.controller;
+package gg.projecteden.justiceweb.controller;
 
-import eden.models.punishments.PunishmentType;
-import eden.models.punishments.PunishmentsService;
-import eden.utils.StringUtils;
+import gg.projecteden.models.punishments.PunishmentType;
+import gg.projecteden.models.punishments.PunishmentsService;
+import gg.projecteden.utils.StringUtils;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
