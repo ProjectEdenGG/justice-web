@@ -1,6 +1,8 @@
 package gg.projecteden.justiceweb.controller;
 
+import gg.projecteden.models.punishments.Punishment;
 import gg.projecteden.models.punishments.PunishmentType;
+import gg.projecteden.models.punishments.Punishments;
 import gg.projecteden.models.punishments.PunishmentsService;
 import gg.projecteden.utils.StringUtils;
 import org.springframework.stereotype.Controller;
@@ -10,6 +12,7 @@ import org.springframework.web.bind.annotation.PathVariable;
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.http.HttpServletRequest;
+import java.util.Comparator;
 
 @Controller
 public class JusticeController {
@@ -21,7 +24,9 @@ public class JusticeController {
 
 	@GetMapping("history/{player}")
 	public String history(@PathVariable("player") String player, Model model) {
-		model.addAttribute("history", new PunishmentsService().get(player));
+		final Punishments punishments = new PunishmentsService().get(player);
+		punishments.getPunishments().sort(Comparator.comparing(Punishment::getTimestamp).reversed());
+		model.addAttribute("history", punishments);
 		return "player";
 	}
 
@@ -37,7 +42,7 @@ public class JusticeController {
 		if (page == null || page < 1) page = 1;
 
 		model.addAttribute("type", punishmentType);
-		model.addAttribute("punishments", new PunishmentsService().page(punishmentType, page, 10));
+		model.addAttribute("punishments", new PunishmentsService().page(punishmentType, page, 50));
 		return "recent";
 	}
 

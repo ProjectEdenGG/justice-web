@@ -1,9 +1,11 @@
 <component name="ProjectRunConfigurationManager">
   <configuration default="false" name="justice-web" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
     <module name="justice-web.main" />
-    <option name="SPRING_BOOT_MAIN_CLASS" value="me.pugabyte.justiceweb.Application" />
+    <option name="SPRING_BOOT_MAIN_CLASS" value="gg.projecteden.justiceweb.Application" />
     <option name="ACTIVE_PROFILES" value="development" />
+    <option name="VM_PARAMETERS" value="--add-opens java.base/java.util=ALL-UNNAMED --add-opens java.base/java.lang=ALL-UNNAMED" />
     <option name="ALTERNATIVE_JRE_PATH" />
+    <option name="SHORTEN_COMMAND_LINE" value="NONE" />
     <method v="2">
       <option name="Make" enabled="true" />
     </method>
