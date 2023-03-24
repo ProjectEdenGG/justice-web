@@ -1,9 +1,9 @@
 package gg.projecteden.justiceweb.thymeleaf;
 
-import gg.projecteden.models.nerd.Nerd;
-import gg.projecteden.models.punishments.PunishmentType;
-import gg.projecteden.utils.StringUtils;
-import gg.projecteden.utils.TimeUtils;
+import gg.projecteden.api.common.utils.StringUtils;
+import gg.projecteden.api.common.utils.TimeUtils;
+import gg.projecteden.api.mongodb.models.nerd.Nerd;
+import gg.projecteden.api.mongodb.models.punishments.PunishmentType;
 import lombok.SneakyThrows;
 import org.springframework.stereotype.Component;
 import org.thymeleaf.context.IExpressionContext;

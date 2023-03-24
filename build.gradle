@@ -27,6 +27,7 @@ dependencies {
 	testImplementation 'org.springframework.boot:spring-boot-starter-test'
 	annotationProcessor 'org.springframework.boot:spring-boot-configuration-processor'
 	annotationProcessor 'org.projectlombok:lombok'
-	implementation 'gg.projecteden:eden-api:1.6.8'
+	implementation 'gg.projecteden:eden-common:2.2.8-SNAPSHOT'
+	implementation 'gg.projecteden:eden-db:2.2.8-SNAPSHOT'
 }
 

@@ -1,15 +1,15 @@
 package gg.projecteden.justiceweb;
 
-import gg.projecteden.EdenAPI;
-import gg.projecteden.mongodb.DatabaseConfig;
-import gg.projecteden.utils.Env;
+import gg.projecteden.api.common.utils.Env;
+import gg.projecteden.api.mongodb.DatabaseConfig;
+import gg.projecteden.api.mongodb.EdenDatabaseAPI;
 import lombok.Getter;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class Application extends EdenAPI {
+public class Application extends EdenDatabaseAPI {
 
 	public static void main(String[] args) {
 		new Application();
@@ -33,6 +33,7 @@ public class Application extends EdenAPI {
 		return DatabaseConfig.builder()
 				.password(mongodb_password)
 				.env(env)
+				.caching(false)
 				.build();
 	}
 

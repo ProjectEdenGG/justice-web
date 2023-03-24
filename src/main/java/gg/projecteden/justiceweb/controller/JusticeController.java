@@ -1,10 +1,10 @@
 package gg.projecteden.justiceweb.controller;
 
-import gg.projecteden.models.punishments.Punishment;
-import gg.projecteden.models.punishments.PunishmentType;
-import gg.projecteden.models.punishments.Punishments;
-import gg.projecteden.models.punishments.PunishmentsService;
-import gg.projecteden.utils.StringUtils;
+import gg.projecteden.api.common.utils.StringUtils;
+import gg.projecteden.api.mongodb.models.punishments.PunishmentType;
+import gg.projecteden.api.mongodb.models.punishments.Punishment;
+import gg.projecteden.api.mongodb.models.punishments.Punishments;
+import gg.projecteden.api.mongodb.models.punishments.PunishmentsService;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
