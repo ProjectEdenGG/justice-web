@@ -1,5 +1,5 @@
 plugins {
-	id 'org.springframework.boot' version '2.5.4'
+	id 'org.springframework.boot' version '2.7.18'
 	id 'io.spring.dependency-management' version '1.0.11.RELEASE'
 	id 'com.github.johnrengelman.shadow' version '7.1.1'
 	id 'java'
@@ -7,7 +7,6 @@ plugins {
 
 group = 'gg.projecteden'
 version = '0.0.1-SNAPSHOT'
-sourceCompatibility = '17'
 
 configurations {
 	compileOnly {
@@ -27,7 +26,7 @@ dependencies {
 	testImplementation 'org.springframework.boot:spring-boot-starter-test'
 	annotationProcessor 'org.springframework.boot:spring-boot-configuration-processor'
 	annotationProcessor 'org.projectlombok:lombok'
-	implementation 'gg.projecteden:eden-common:2.2.8-SNAPSHOT'
-	implementation 'gg.projecteden:eden-db:2.2.8-SNAPSHOT'
+	implementation 'gg.projecteden:eden-common:2.3.12-SNAPSHOT'
+	implementation 'gg.projecteden:eden-db:2.3.12-SNAPSHOT'
 }
 
